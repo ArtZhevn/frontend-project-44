@@ -1,39 +1,43 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { exportedName, greetings } from '../src/cli.js';
 
 export default () => {
   console.log('brain-calc');
   console.log('');
-  greetings();
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log('What is the result of the expression?');
   let i = 0;
   while (i < 3) {
     const firstNumber = Math.floor(Math.random() * 50) + 1;
     const secondNumber = Math.floor(Math.random() * 50) + 1;
     const indexOfMathOperation = Math.floor(Math.random() * 3) + 1;
-    let operation;
+    let expression;
+    let answer; // numb
     if (indexOfMathOperation === 1) {
-      operation = '+';
+      expression = `${firstNumber} + ${secondNumber}`;
+      answer = firstNumber + secondNumber;
     } else if (indexOfMathOperation === 2) {
-      operation = '-';
+      expression = `${firstNumber} - ${secondNumber}`;
+      answer = firstNumber - secondNumber;
     } else if (indexOfMathOperation === 3) {
-      operation = '*';
+      expression = `${firstNumber} * ${secondNumber}`;
+      answer = firstNumber * secondNumber;
     }
-    const answer = `${firstNumber}${operation}${secondNumber}`;
-    const question = readlineSync.question(`Question: ${firstNumber}${operation}${secondNumber} `);
+    const question = readlineSync.question(`Question: ${expression} `); // str
     console.log(`Your answer: ${question}`);
-    if (question === answer) {
-      console.log('Correct');
+    if (Number(question) === answer) {
+      console.log('Correct!');
       i += 1;
     } else {
-      console.log(`'${question}' is wrong answer ;(. Correct answer was '${answer}'`);
+      console.log(`'${question}' is wrong answer ;(. Correct answer was '${answer}'.`);
       break;
     }
   }
   if (i === 3) {
-    console.log(`Congratulations, ${exportedName}!`);
+    console.log(`Congratulations, ${name}!`);
   } else {
-    console.log(`Let's try again, ${exportedName}`);
+    console.log(`Let's try again, ${name}!`);
   }
 };

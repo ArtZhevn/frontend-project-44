@@ -1,11 +1,12 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { exportedName, greetings } from '../src/cli.js';
 
-const brainEven = () => {
+export default () => {
   console.log('brain-even');
   console.log('');
-  greetings();
+  console.log('Welcome to the Brain Games!');
+  const name = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${name}!`);
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   let i = 0;
   while (i < 3) {
@@ -31,13 +32,11 @@ const brainEven = () => {
     }
   }
   if (i === 3) {
-    console.log(`Congratulations, ${exportedName}!`);
+    console.log(`Congratulations, ${name}!`);
   } else {
-    console.log(`Let's try again, ${exportedName}`);
+    console.log(`Let's try again, ${name}`);
   }
 };
-brainEven();
 
 // убрать ввод ответа в игре
-// пофиксить let в импорте из cli.js
 // первая строчка игры
