@@ -12,7 +12,7 @@ export default () => {
   while (i < 3) {
     let beginOfArray = Math.floor(Math.random() * 20) + 1;
     const stepOfProgression = Math.floor(Math.random() * 9) + 2;
-    const emptyElement = Math.floor(Math.random() * 10) + 1;
+    const emptyElement = Math.floor(Math.random() * 9) + 0;
     const arrOfProgression = [];
     while (arrOfProgression.length < 10) {
       arrOfProgression.push(beginOfArray);
