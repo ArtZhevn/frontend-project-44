@@ -10,6 +10,8 @@ brain-gcd:
 	node game/game-brain-gcd.js
 brain-progression:
 	node game/game-brain-progression.js
+brain-prime:
+	node game/game-brain-prime.js
 publish:
 	npm publish --dry-run
 lint: 
