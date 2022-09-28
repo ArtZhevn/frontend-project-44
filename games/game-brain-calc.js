@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import {
-  greetings, rightAnswer, lastRandomNumber, firstRandomNumber, wrongAnswerForCalc,
+  greetings, rightAnswer, lastRandomNumber, firstRandomNumber, wrongAnswer,
 } from '../src/index.js';
 
 export default () => {
@@ -38,6 +38,6 @@ export default () => {
   if (i === 3) {
     rightAnswer();
   } else {
-    wrongAnswerForCalc();
+    wrongAnswer();
   }
 };
