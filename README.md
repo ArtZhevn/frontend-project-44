@@ -9,4 +9,3 @@ https://asciinema.org/a/6X3MgYRe7iFIriiMtkMRRfJdp
 Первый проект включает в себя 5 разных математических игр
 Установка происходит при помощи команды npm link
 Запуск каждой игры осуществляется отдельно при помощи makefile (make brain-even, make brain-calc, make brain-progression, make brain-gcd, make brain-prime)
-удачи <3
