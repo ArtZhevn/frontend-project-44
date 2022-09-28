@@ -1,18 +1,15 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { rightAnswer, wrongAnswer } from '../src/index.js';
+import {
+  greetings, rightAnswer, wrongAnswer, positiveResponse, negativeResponse,
+} from '../src/index.js';
 
 export default () => {
   console.log('brain-prime');
-  console.log('');
-  console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
+  greetings();
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
   let i = 0;
   while (i < 3) {
-    const positiveResponse = 'yes';
-    const negativeResponse = 'no';
     let answer;
     const allDeviders = [];
     const arrOfDeviders = [];

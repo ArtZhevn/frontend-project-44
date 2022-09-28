@@ -18,9 +18,6 @@ export const wrongAnswer = () => {
   console.log(`Let's try again, ${exportedName}!`);
 };
 
-export const wrongAnswerForCalc = () => {
-  console.log(`Let's try again, ${exportedName}`);
-};
 export const lastRandomNumber = 19;
 export const firstRandomNumber = 1;
 export const positiveResponse = 'yes';
