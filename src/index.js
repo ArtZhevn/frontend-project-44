@@ -15,7 +15,7 @@ export const rightAnswer = () => {
 };
 
 export const wrongAnswer = () => {
-  console.log(`Let's try again, ${exportedName}`);
+  console.log(`Let's try again, ${exportedName}`!);
 };
 
 export const lastRandomNumber = 19;
