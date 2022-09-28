@@ -21,7 +21,7 @@ export default () => {
     }
     const answer = arrOfProgression[emptyElement];
     arrOfProgression[emptyElement] = '..';
-    const input = readlineSync.question(`Question: ${arrOfProgression} `);
+    const input = readlineSync.question(`Question: ${arrOfProgression.join('  ')} `);
     console.log(`Your answer: ${input}`);
     if (Number(input) === answer) {
       console.log('Correct!');
