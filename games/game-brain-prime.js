@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
+import { rightAnswer, wrongAnswer } from '../src/index.js';
 
 export default () => {
   console.log('brain-prime');
@@ -40,8 +41,8 @@ export default () => {
     }
   }
   if (i === 3) {
-    console.log(`Congratulations, ${name}!`);
+    rightAnswer();
   } else {
-    console.log(`Let's try again, ${name}`);
+    wrongAnswer();
   }
 };
