@@ -18,7 +18,5 @@ export const giveWrongAnswer = () => {
   console.log(`Let's try again, ${exportedName}!`);
 };
 
-export const lastRandomNumber = 19;
-export const firstRandomNumber = 1;
 export const positiveResponse = 'yes';
 export const negativeResponse = 'no';
