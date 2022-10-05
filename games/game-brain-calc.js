@@ -1,18 +1,18 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import {
-  greetings, giveRightAnswer, lastRandomNumber, firstRandomNumber, giveWrongAnswer,
-} from '../src/index.js';
+import { greetings, giveRightAnswer, giveWrongAnswer } from '../src/index.js';
+import randomNumber from '../src/utils.js';
 
 export default () => {
   console.log('brain-calc');
   greetings();
   console.log('What is the result of the expression?');
   let i = 0;
+  const lastRandomIndex = 3;
   while (i < 3) {
-    const firstNumber = Math.floor(Math.random() * lastRandomNumber) + firstRandomNumber;
-    const secondNumber = Math.floor(Math.random() * lastRandomNumber) + firstRandomNumber;
-    const indexOfMathOperation = Math.floor(Math.random() * 3) + 1;
+    const firstNumber = randomNumber();
+    const secondNumber = randomNumber();
+    const indexOfMathOperation = randomNumber(lastRandomIndex);
     let expression;
     let answer;
     if (indexOfMathOperation === 1) {

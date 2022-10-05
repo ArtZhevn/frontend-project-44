@@ -1,21 +1,21 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import {
-  greetings, giveRightAnswer, giveWrongAnswer, lastRandomNumber, firstRandomNumber,
-} from '../src/index.js';
+import { greetings, giveRightAnswer, giveWrongAnswer } from '../src/index.js';
+import randomNumb from '../src/utils.js';
 
 export default () => {
   greetings();
   console.log('What number is missing in the progression?');
   let i = 0;
   while (i < 3) {
-    const maxStep = 9;
     const minStep = 2;
-    let beginOfArray = Math.floor(Math.random() * lastRandomNumber) + firstRandomNumber;
-    const stepOfProgression = Math.floor(Math.random() * maxStep) + minStep;
-    const emptyElement = Math.floor(Math.random() * 9) + 0;
+    const lastIndex = 9;
+    const firstIndex = 0;
+    let beginOfArray = randomNumb();
+    const stepOfProgression = randomNumb(lastIndex, minStep);
     const arrOfProgression = [];
-    while (arrOfProgression.length < 10) {
+    const emptyElement = randomNumb(lastIndex, firstIndex);
+    while (arrOfProgression.length <= lastIndex) {
       arrOfProgression.push(beginOfArray);
       beginOfArray += stepOfProgression;
     }

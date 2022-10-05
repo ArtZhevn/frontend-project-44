@@ -3,6 +3,7 @@ import readlineSync from 'readline-sync';
 import {
   greetings, giveRightAnswer, giveWrongAnswer, positiveResponse, negativeResponse,
 } from '../src/index.js';
+import randomNumb from '../src/utils.js';
 
 export default () => {
   console.log('brain-prime');
@@ -13,7 +14,7 @@ export default () => {
     let answer;
     const allDeviders = [];
     const arrOfDeviders = [];
-    const isPrime = Math.floor(Math.random() * 19) + 1;
+    const isPrime = randomNumb();
     for (let firstElementOfArr = 1; firstElementOfArr <= isPrime; firstElementOfArr += 1) {
       arrOfDeviders.push(firstElementOfArr);
     }

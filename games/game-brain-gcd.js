@@ -1,8 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import {
-  greetings, giveRightAnswer, giveWrongAnswer, lastRandomNumber, firstRandomNumber,
-} from '../src/index.js';
+import { greetings, giveRightAnswer, giveWrongAnswer } from '../src/index.js';
+import ranomNumb from '../src/utils.js';
 
 export default () => {
   console.log('brain-gcd');
@@ -10,8 +9,8 @@ export default () => {
   console.log('Find the greatest common divisor of given numbers.');
   let i = 0;
   while (i < 3) {
-    const firstNumber = Math.floor(Math.random() * lastRandomNumber) + firstRandomNumber;
-    const secondNumber = Math.floor(Math.random() * lastRandomNumber) + firstRandomNumber;
+    const firstNumber = ranomNumb();
+    const secondNumber = ranomNumb();
     let count = 19;
     const input = readlineSync.question(`Question: ${firstNumber} ${secondNumber} `);
     console.log(`Your answer: ${input}`);

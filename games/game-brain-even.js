@@ -1,9 +1,9 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import {
-  greetings, giveRightAnswer, giveWrongAnswer, lastRandomNumber, firstRandomNumber,
-  positiveResponse, negativeResponse,
+  greetings, giveRightAnswer, giveWrongAnswer, positiveResponse, negativeResponse,
 } from '../src/index.js';
+import randomNumber from '../src/utils.js';
 
 export default () => {
   console.log('brain-even');
@@ -11,7 +11,7 @@ export default () => {
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
   let i = 0;
   while (i < 3) {
-    const checkNumber = Math.floor(Math.random() * lastRandomNumber) + firstRandomNumber;
+    const checkNumber = randomNumber();
     const input = readlineSync.question(`Question: ${checkNumber} `);
     console.log(`Your answer: ${input}`);
     if (input === positiveResponse && checkNumber % 2 === 0) {
