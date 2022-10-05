@@ -3,8 +3,8 @@
 <h3>Requirements:<ul><li width="normal">Ubuntu/Linux/Mac</li><li width="normal">Node.js 18.0</li></ul>
 <h3>Install:<h3>
 <p width="normal", height="10">$ git clone git@github.com:ArtZhevn/frontend-project-44.git</p>
-<p width="normal", height="15">$ cd frontend-project-44</p>
-<p width="normal", height="20">$ npm link</p>
+<p width="normal", height="320">$ cd frontend-project-44</p>
+<p width="normal" height="32">$ npm link</p>
 
 <p>Demo 'brain-even':</p>
 <a href="https://asciinema.org/a/qXgmKduXEFHOg3BTGWT2LioDx" target="_blank"><img src="https://asciinema.org/a/qXgmKduXEFHOg3BTGWT2LioDx.svg" /></a>
