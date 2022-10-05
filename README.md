@@ -7,15 +7,15 @@
 <p>$ npm link</p>
 
 <p>Demo 'brain-even'</p>
-[![asciicast](https://asciinema.org/a/qXgmKduXEFHOg3BTGWT2LioDx.svg)](https://asciinema.org/a/qXgmKduXEFHOg3BTGWT2LioDx)
+<a href="https://asciinema.org/a/qXgmKduXEFHOg3BTGWT2LioDx" target="_blank"><img src="https://asciinema.org/a/qXgmKduXEFHOg3BTGWT2LioDx.svg" /></a>
 <p>Demo 'brain-calc'</p>
-[![asciicast](https://asciinema.org/a/k6WKdDkN9f2hAluFBjZYrEWcR.svg)](https://asciinema.org/a/k6WKdDkN9f2hAluFBjZYrEWcR)
+<a href="https://asciinema.org/a/k6WKdDkN9f2hAluFBjZYrEWcR" target="_blank"><img src="https://asciinema.org/a/k6WKdDkN9f2hAluFBjZYrEWcR.svg" /></a>
 <p>Demo 'brain-gcd'</p>
-[![asciicast](https://asciinema.org/a/P2sQ4WPJDyKJL47H1VqYqYaDo.svg)](https://asciinema.org/a/P2sQ4WPJDyKJL47H1VqYqYaDo)
+<a href="https://asciinema.org/a/P2sQ4WPJDyKJL47H1VqYqYaDo" target="_blank"><img src="https://asciinema.org/a/P2sQ4WPJDyKJL47H1VqYqYaDo.svg" /></a>
 <p>Demo 'brain-progression'</p>
-[![asciicast](https://asciinema.org/a/Deexd3q0kXkHORzN1WnD2M81c.svg)](https://asciinema.org/a/Deexd3q0kXkHORzN1WnD2M81c)
+<a href="https://asciinema.org/a/Deexd3q0kXkHORzN1WnD2M81c" target="_blank"><img src="https://asciinema.org/a/Deexd3q0kXkHORzN1WnD2M81c.svg" /></a>
 <p>Demo 'brain-prime'</p>
-[![asciicast](https://asciinema.org/a/6X3MgYRe7iFIriiMtkMRRfJdp.svg)](https://asciinema.org/a/6X3MgYRe7iFIriiMtkMRRfJdp)
+<a href="https://asciinema.org/a/6X3MgYRe7iFIriiMtkMRRfJdp" target="_blank"><img src="https://asciinema.org/a/6X3MgYRe7iFIriiMtkMRRfJdp.svg" /></a>
 
 ### Hexlet tests and linter status:
 [![Actions Status](https://github.com/ArtZhevn/frontend-project-44/workflows/hexlet-check/badge.svg)](https://github.com/ArtZhevn/frontend-project-44/actions)
