@@ -10,11 +10,11 @@ export const greetings = () => {
   exportedName = name;
 };
 
-export const rightAnswer = () => {
+export const giveRightAnswer = () => {
   console.log(`Congratulations, ${exportedName}!`);
 };
 
-export const wrongAnswer = () => {
+export const giveWrongAnswer = () => {
   console.log(`Let's try again, ${exportedName}!`);
 };
 

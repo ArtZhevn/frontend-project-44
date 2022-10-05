@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import {
-  greetings, rightAnswer, lastRandomNumber, firstRandomNumber, wrongAnswer,
+  greetings, giveRightAnswer, lastRandomNumber, firstRandomNumber, giveWrongAnswer,
 } from '../src/index.js';
 
 export default () => {
@@ -12,7 +12,7 @@ export default () => {
   while (i < 3) {
     const firstNumber = Math.floor(Math.random() * lastRandomNumber) + firstRandomNumber;
     const secondNumber = Math.floor(Math.random() * lastRandomNumber) + firstRandomNumber;
-    const indexOfMathOperation = Math.floor(Math.random() * 3) + 1; // каждой операции своя цифра
+    const indexOfMathOperation = Math.floor(Math.random() * 3) + 1;
     let expression;
     let answer;
     if (indexOfMathOperation === 1) {
@@ -36,8 +36,8 @@ export default () => {
     }
   }
   if (i === 3) {
-    rightAnswer();
+    giveRightAnswer();
   } else {
-    wrongAnswer();
+    giveWrongAnswer();
   }
 };

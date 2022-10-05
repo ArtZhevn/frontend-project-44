@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import {
-  greetings, rightAnswer, wrongAnswer, lastRandomNumber, firstRandomNumber,
+  greetings, giveRightAnswer, giveWrongAnswer, lastRandomNumber, firstRandomNumber,
 } from '../src/index.js';
 
 export default () => {
@@ -15,7 +15,7 @@ export default () => {
     let count = 19;
     const input = readlineSync.question(`Question: ${firstNumber} ${secondNumber} `);
     console.log(`Your answer: ${input}`);
-    while ((firstNumber % count !== 0) || (secondNumber % count !== 0)) { // почему ||, а не &&
+    while ((firstNumber % count !== 0) || (secondNumber % count !== 0)) {
       count -= 1;
     }
     const commonDivisor = count;
@@ -28,8 +28,8 @@ export default () => {
     }
   }
   if (i === 3) {
-    rightAnswer();
+    giveRightAnswer();
   } else {
-    wrongAnswer();
+    giveWrongAnswer();
   }
 };

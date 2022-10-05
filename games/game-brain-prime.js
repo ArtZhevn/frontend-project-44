@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import {
-  greetings, rightAnswer, wrongAnswer, positiveResponse, negativeResponse,
+  greetings, giveRightAnswer, giveWrongAnswer, positiveResponse, negativeResponse,
 } from '../src/index.js';
 
 export default () => {
@@ -15,7 +15,7 @@ export default () => {
     const arrOfDeviders = [];
     const isPrime = Math.floor(Math.random() * 19) + 1;
     for (let firstElementOfArr = 1; firstElementOfArr <= isPrime; firstElementOfArr += 1) {
-      arrOfDeviders.push(firstElementOfArr); // массив всех делителей (1)
+      arrOfDeviders.push(firstElementOfArr);
     }
     for (let indexOfDeviders = 0; indexOfDeviders < arrOfDeviders.length; indexOfDeviders += 1) {
       if (isPrime % arrOfDeviders[indexOfDeviders] === 0) {
@@ -38,8 +38,8 @@ export default () => {
     }
   }
   if (i === 3) {
-    rightAnswer();
+    giveRightAnswer();
   } else {
-    wrongAnswer();
+    giveWrongAnswer();
   }
 };

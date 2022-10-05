@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import {
-  greetings, rightAnswer, wrongAnswer, lastRandomNumber, firstRandomNumber,
+  greetings, giveRightAnswer, giveWrongAnswer, lastRandomNumber, firstRandomNumber,
 } from '../src/index.js';
 
 export default () => {
@@ -13,7 +13,7 @@ export default () => {
     const minStep = 2;
     let beginOfArray = Math.floor(Math.random() * lastRandomNumber) + firstRandomNumber;
     const stepOfProgression = Math.floor(Math.random() * maxStep) + minStep;
-    const emptyElement = Math.floor(Math.random() * 9) + 0; // пустой эл-т в 1 из 10 индексе
+    const emptyElement = Math.floor(Math.random() * 9) + 0;
     const arrOfProgression = [];
     while (arrOfProgression.length < 10) {
       arrOfProgression.push(beginOfArray);
@@ -32,8 +32,8 @@ export default () => {
     }
   }
   if (i === 3) {
-    rightAnswer();
+    giveRightAnswer();
   } else {
-    wrongAnswer();
+    giveWrongAnswer();
   }
 };
