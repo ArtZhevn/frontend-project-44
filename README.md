@@ -2,9 +2,9 @@
 <h2>You are presented with five mini-games that will stretch your brains</h2>
 <h3>Requirements<ul><li>Ubuntu/Linux/Mac</li><li>Node.js 18.0</li></ul>
 <h3>Install<h3>
-$ git clone git@github.com:ArtZhevn/frontend-project-44.git
-$ cd frontend-project-44
-$ npm link
+<p>$ git clone git@github.com:ArtZhevn/frontend-project-44.git</p>
+<p>$ cd frontend-project-44</p>
+<p>$ npm link</p>
 
 <p>Demo 'brain-even'</p>
 [![asciicast](https://asciinema.org/a/qXgmKduXEFHOg3BTGWT2LioDx.svg)](https://asciinema.org/a/qXgmKduXEFHOg3BTGWT2LioDx)
