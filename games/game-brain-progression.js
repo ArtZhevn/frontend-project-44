@@ -27,7 +27,7 @@ export default () => {
       console.log('Correct!');
       i += 1;
     } else {
-      console.log(`${input} is wrong answer ;(. Correct answer was ${answer}.`);
+      console.log(`'${input}' is wrong answer ;(. Correct answer was '${answer}'.`);
       break;
     }
   }
