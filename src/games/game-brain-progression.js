@@ -1,39 +1,26 @@
 #!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import { greetings, giveRightAnswer, giveWrongAnswer } from '../index.js';
-import randomNumb from '../utils.js';
+import startProgression from '../index.js';
+import getRandomNumber from '../utils.js';
 
-export default () => {
-  greetings();
-  console.log('What number is missing in the progression?');
-  let i = 0;
-  while (i < 3) {
-    const minStep = 2;
-    const lastIndex = 9;
-    const firstIndex = 0;
-    let beginOfArray = randomNumb();
-    const stepOfProgression = randomNumb(lastIndex, minStep);
-    const arrOfProgression = [];
-    const emptyElement = randomNumb(lastIndex, firstIndex);
-    while (arrOfProgression.length <= lastIndex) {
-      arrOfProgression.push(beginOfArray);
-      beginOfArray += stepOfProgression;
-    }
-    const answer = arrOfProgression[emptyElement];
-    arrOfProgression[emptyElement] = '..';
-    const input = readlineSync.question(`Question: ${arrOfProgression.join(' ')} `);
-    console.log(`Your answer: ${input}`);
-    if (Number(input) === answer) {
-      console.log('Correct!');
-      i += 1;
-    } else {
-      console.log(`'${input}' is wrong answer ;(. Correct answer was '${answer}'.`);
-      break;
-    }
+const nameOfTheGame = 'What number is missing in the progression?';
+const rulesOfTheGame = () => {
+  const minStep = 2;
+  const lastIndex = 9;
+  const firstIndex = 0;
+  let beginOfArray = getRandomNumber();
+  const stepOfProgression = getRandomNumber(lastIndex, minStep);
+  const arrOfProgression = [];
+  const emptyElement = getRandomNumber(lastIndex, firstIndex);
+  while (arrOfProgression.length <= lastIndex) {
+    arrOfProgression.push(beginOfArray);
+    beginOfArray += stepOfProgression;
   }
-  if (i === 3) {
-    giveRightAnswer();
-  } else {
-    giveWrongAnswer();
-  }
+  const answer = arrOfProgression[emptyElement];
+  arrOfProgression[emptyElement] = '..';
+  const input = readlineSync.question(`Question: ${arrOfProgression.join(' ')} `);
+  console.log(`Your answer: ${input}`);
+  return [Number(input), answer];
 };
+
+startProgression(nameOfTheGame, rulesOfTheGame);

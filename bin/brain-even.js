@@ -1,4 +1,3 @@
 #!/usr/bin/env node
-import startGameEven from '../src/games/game-brain-even.js';
-
-startGameEven();
+// eslint-disable-next-line no-unused-vars
+import startEven from '../src/games/game-brain-even.js';

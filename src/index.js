@@ -1,22 +1,24 @@
-/* eslint-disable import/no-mutable-exports */
 import readlineSync from 'readline-sync';
 
-export let exportedName;
-export const greetings = () => {
-  console.log('');
+export default (nameOfGame, rulesOfTheGame) => {
   console.log('Welcome to the Brain Games!');
-  const name = readlineSync.question('May I have your name? ');
-  console.log(`Hello, ${name}!`);
-  exportedName = name;
+  const userName = readlineSync.question('May I have your name? ');
+  console.log(`Hello, ${userName}!`);
+  console.log(nameOfGame);
+  let count = 0;
+  while (count < 3) {
+    const arrayOfValues = rulesOfTheGame();
+    if (arrayOfValues[0] === arrayOfValues[1]) {
+      console.log('Correct!');
+      count += 1;
+    } else {
+      console.log(`'${arrayOfValues[0]} is wrong answer ;(. Correct answer was '${arrayOfValues[1]}'.`);
+      break;
+    }
+  }
+  if (count === 3) {
+    console.log(`Congratulations, ${userName}!`);
+  } else {
+    console.log(`Let's try again, ${userName}!`);
+  }
 };
-
-export const giveRightAnswer = () => {
-  console.log(`Congratulations, ${exportedName}!`);
-};
-
-export const giveWrongAnswer = () => {
-  console.log(`Let's try again, ${exportedName}!`);
-};
-
-export const positiveResponse = 'yes';
-export const negativeResponse = 'no';

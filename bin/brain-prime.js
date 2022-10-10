@@ -1,4 +1,3 @@
 #!/usr/bin/env node
-import startGamePrime from '../src/games/game-brain-prime.js';
-
-startGamePrime();
+// eslint-disable-next-line no-unused-vars
+import startPrime from '../src/games/game-brain-prime.js';

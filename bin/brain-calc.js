@@ -1,4 +1,3 @@
 #!/usr/bin/env node
-import startGameCalc from '../src/games/game-brain-calc.js';
-
-startGameCalc();
+// eslint-disable-next-line no-unused-vars
+import startCalc from '../src/games/game-brain-calc.js';
