@@ -3,8 +3,8 @@ import readlineSync from 'readline-sync';
 import startGcd from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const nameOfTheGame = 'Find the greatest common divisor of given numbers.';
-const rulesOfTheGame = () => {
+const rulesOfTheGame = 'Find the greatest common divisor of given numbers.';
+const logicOfTheGame = () => {
   const firstNumber = getRandomNumber();
   const secondNumber = getRandomNumber();
   let count = 19;
@@ -17,4 +17,4 @@ const rulesOfTheGame = () => {
   return [Number(input), answer];
 };
 
-export default startGcd(nameOfTheGame, rulesOfTheGame);
+export default startGcd(rulesOfTheGame, logicOfTheGame);

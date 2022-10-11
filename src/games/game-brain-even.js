@@ -3,8 +3,8 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../utils.js';
 import startEven from '../index.js';
 
-const nameOfGame = 'Answer "yes" if the number is even, otherwise answer "no".';
-const rulesOfTheGame = () => {
+const rulesOftheGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+const logicOfTheGame = () => {
   let answer;
   const checkNumber = getRandomNumber();
   const input = readlineSync.question(`Question: ${checkNumber} `);
@@ -17,4 +17,4 @@ const rulesOfTheGame = () => {
   return [input, answer];
 };
 
-export default startEven(nameOfGame, rulesOfTheGame);
+export default startEven(rulesOftheGame, logicOfTheGame);

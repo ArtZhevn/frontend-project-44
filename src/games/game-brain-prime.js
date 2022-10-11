@@ -3,9 +3,9 @@ import readlineSync from 'readline-sync';
 import startPrime from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const nameOfGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
+const rulesOfTheGame = 'Answer "yes" if given number is prime. Otherwise answer "no".';
 
-const rulesOfTheGame = () => {
+const logicOfTheGame = () => {
   let answer;
   const allDeviders = [];
   const arrOfDeviders = [];
@@ -28,4 +28,4 @@ const rulesOfTheGame = () => {
   return [input, answer];
 };
 
-export default startPrime(nameOfGame, rulesOfTheGame);
+export default startPrime(rulesOfTheGame, logicOfTheGame);

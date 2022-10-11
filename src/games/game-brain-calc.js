@@ -3,10 +3,10 @@ import readlineSync from 'readline-sync';
 import getRandomNumber from '../utils.js';
 import startCalc from '../index.js';
 
-const nameOfGame = 'What is the result of the expression?';
+const rulesOfTheGame = 'What is the result of the expression?';
 const lastRandomIndex = 3;
 let expression;
-const rulesOfTheGame = () => {
+const logicOfTheGame = () => {
   const firstNumber = getRandomNumber();
   const secondNumber = getRandomNumber();
   const indexOfMathOperation = getRandomNumber(lastRandomIndex);
@@ -25,4 +25,4 @@ const rulesOfTheGame = () => {
   return [Number(input), answer];
 };
 
-export default startCalc(nameOfGame, rulesOfTheGame);
+export default startCalc(rulesOfTheGame, logicOfTheGame);
