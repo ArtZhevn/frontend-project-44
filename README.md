@@ -1,6 +1,11 @@
 <h1 align="center">Weclome to the Brain-Games</h1>
 <h2 align="center">You are presented with five games that will stretch your brain's limit</h2>
-<h5>Requirements:<ul><li>Ubuntu/Linux/Mac</li><li>Node.js 18.0</li></ul></h5>
+### Requirements:
+
+```bash 
+```
+<ul><li>Ubuntu/Linux/Mac</li><li>Node.js 18.0</li></ul></h5>
+```
 <h5>Install:<h5>
 <p>$ git clone git@github.com:ArtZhevn/frontend-project-44.git</p>
 <p>$ cd frontend-project-44</p>
