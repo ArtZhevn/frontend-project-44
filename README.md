@@ -3,15 +3,27 @@
 
 ### Requirements:
 
+```
 - Ubuntu/Linux/Mac
 - Node.js 18.0
+```
 
-### Install
+### Setup:
 
 ```
  $ git clone git@github.com:ArtZhevn/frontend-project-44.git
  $ cd frontend-project-44
  $ npm link
+```
+
+### Start games:
+
+```
+ $ make brain-even
+ $ make brain-calc
+ $ make brain-gcd
+ $ make brain-progression
+ $ make brain-prime
 ```
 
 Demo 'brain-even':
