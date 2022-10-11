@@ -1,10 +1,10 @@
 <h1 align="center">Weclome to the Brain-Games</h1>
 <h2 align="center">You are presented with five games that will stretch your brain's limit</h2>
-<h3>Requirements:<ul><li>Ubuntu/Linux/Mac</li><li>Node.js 18.0</li></ul>
-<h3>Install:<h3>
-<span>$ git clone git@github.com:ArtZhevn/frontend-project-44.git</span>
-<span>$ cd frontend-project-44</span>
-<span>$ npm link</span>
+<h5>Requirements:<ul><li>Ubuntu/Linux/Mac</li><li>Node.js 18.0</li></ul></h5>
+<h5>Install:<h5>
+<p>$ git clone git@github.com:ArtZhevn/frontend-project-44.git</p>
+<p>$ cd frontend-project-44</p>
+<p>$ npm link</p>
 
 <p>Demo 'brain-even':</p>
 <a href="https://asciinema.org/a/BTzqgtxUq1q8AliP0FpEdqdkM" target="_blank"><img src="https://asciinema.org/a/BTzqgtxUq1q8AliP0FpEdqdkM.svg" /></a>
