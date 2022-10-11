@@ -23,4 +23,4 @@ const rulesOfTheGame = () => {
   return [Number(input), answer];
 };
 
-startProgression(nameOfTheGame, rulesOfTheGame);
+export default startProgression(nameOfTheGame, rulesOfTheGame);

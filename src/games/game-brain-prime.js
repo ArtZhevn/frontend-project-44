@@ -28,4 +28,4 @@ const rulesOfTheGame = () => {
   return [input, answer];
 };
 
-startPrime(nameOfGame, rulesOfTheGame);
+export default startPrime(nameOfGame, rulesOfTheGame);

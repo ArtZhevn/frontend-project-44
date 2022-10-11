@@ -17,4 +17,4 @@ const rulesOfTheGame = () => {
   return [Number(input), answer];
 };
 
-startGcd(nameOfTheGame, rulesOfTheGame);
+export default startGcd(nameOfTheGame, rulesOfTheGame);
