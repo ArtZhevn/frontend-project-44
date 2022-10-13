@@ -7,7 +7,7 @@ const logicOfTheGame = () => {
   const minStep = 2;
   const lastIndex = 9;
   const firstIndex = 0;
-  let beginOfArray = getRandomNumber();
+  let beginOfArray = getRandomNumber(19, 1);
   const stepOfProgression = getRandomNumber(lastIndex, minStep);
   const arrOfProgression = [];
   const emptyElement = getRandomNumber(lastIndex, firstIndex);

@@ -4,8 +4,8 @@ import getRandomNumber from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
 const logicOfTheGame = () => {
-  const number1 = getRandomNumber();
-  const number2 = getRandomNumber();
+  const number1 = getRandomNumber(19, 1);
+  const number2 = getRandomNumber(19, 1);
   let count = 19;
   const input = readlineSync.question(`Question: ${number1} ${number2} `);
   console.log(`Your answer: ${input}`);

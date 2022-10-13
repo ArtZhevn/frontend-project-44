@@ -1,4 +1,1 @@
-export default (lastRandomNumber = 19, firstRandomNumber = 1) => {
-  const randomNumber = Math.floor(Math.random() * lastRandomNumber) + firstRandomNumber;
-  return randomNumber;
-};
+export default (min = 1, max = 19) => Math.floor(Math.random() * (max - min + 1)) + min;

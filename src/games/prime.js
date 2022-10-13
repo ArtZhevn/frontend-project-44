@@ -8,7 +8,7 @@ const logicOfTheGame = () => {
   let answer;
   const allDeviders = [];
   const arrOfDeviders = [];
-  const isPrime = getRandomNumber();
+  const isPrime = getRandomNumber(19, 1);
   for (let firstElementOfArr = 1; firstElementOfArr <= isPrime; firstElementOfArr += 1) {
     arrOfDeviders.push(firstElementOfArr);
   }
