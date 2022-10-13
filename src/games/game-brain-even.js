@@ -1,9 +1,8 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import getRandomNumber from '../utils.js';
 import startEven from '../index.js';
 
-const rulesOftheGame = 'Answer "yes" if the number is even, otherwise answer "no".';
+const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 const logicOfTheGame = () => {
   let answer;
   const checkNumber = getRandomNumber();
@@ -17,4 +16,8 @@ const logicOfTheGame = () => {
   return [input, answer];
 };
 
-export default startEven(rulesOftheGame, logicOfTheGame);
+const runGame = () => {
+  startEven(description, logicOfTheGame);
+};
+
+export default runGame;

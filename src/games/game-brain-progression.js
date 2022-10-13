@@ -1,9 +1,8 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
 import startProgression from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const rulesOfTheGame = 'What number is missing in the progression?';
+const description = 'What number is missing in the progression?';
 const logicOfTheGame = () => {
   const minStep = 2;
   const lastIndex = 9;
@@ -23,4 +22,7 @@ const logicOfTheGame = () => {
   return [Number(input), answer];
 };
 
-export default startProgression(rulesOfTheGame, logicOfTheGame);
+const runGame = () => {
+  startProgression(description, logicOfTheGame);
+};
+export default runGame;

@@ -1,20 +1,23 @@
-#!/usr/bin/env node
 import readlineSync from 'readline-sync';
-import startGcd from '../index.js';
+import startGCD from '../index.js';
 import getRandomNumber from '../utils.js';
 
-const rulesOfTheGame = 'Find the greatest common divisor of given numbers.';
+const description = 'Find the greatest common divisor of given numbers.';
 const logicOfTheGame = () => {
-  const firstNumber = getRandomNumber();
-  const secondNumber = getRandomNumber();
+  const number1 = getRandomNumber();
+  const number2 = getRandomNumber();
   let count = 19;
-  const input = readlineSync.question(`Question: ${firstNumber} ${secondNumber} `);
+  const input = readlineSync.question(`Question: ${number1} ${number2} `);
   console.log(`Your answer: ${input}`);
-  while ((firstNumber % count !== 0) || (secondNumber % count !== 0)) {
+  while ((number1 % count !== 0) || (number2 % count !== 0)) {
     count -= 1;
   }
   const answer = count;
   return [Number(input), answer];
 };
 
-export default startGcd(rulesOfTheGame, logicOfTheGame);
+export const runGame = () => {
+  startGCD(description, logicOfTheGame);
+};
+
+export default runGame;
