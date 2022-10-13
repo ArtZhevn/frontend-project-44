@@ -13,7 +13,7 @@
 ```
  $ git clone git@github.com:ArtZhevn/frontend-project-44.git
  $ cd frontend-project-44
- $ npm link
+ $ sudo npm link
 ```
 
 ### Start games:
