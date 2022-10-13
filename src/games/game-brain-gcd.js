@@ -16,7 +16,7 @@ const logicOfTheGame = () => {
   return [Number(input), answer];
 };
 
-export const runGame = () => {
+const runGame = () => {
   startGCD(description, logicOfTheGame);
 };
 
