@@ -4,8 +4,10 @@ import startEven from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 const logicOfTheGame = () => {
+  const minRandomNumber = 1;
+  const maxRandomNumber = 19;
   let answer;
-  const checkNumber = getRandomNumber(19, 1);
+  const checkNumber = getRandomNumber(maxRandomNumber, minRandomNumber);
   const input = readlineSync.question(`Question: ${checkNumber} `);
   console.log(`Your answer: ${input}`);
   if (checkNumber % 2 === 0) {
