@@ -7,16 +7,27 @@ const lastRandomIndex = 2;
 const minRandomNumber = 1;
 const maxRandomNumber = 19;
 const calcExpression = (number1, number2, operation) => { // возможно стоит заменить на switch
-  let answer;
-  if (operation === '+') {
-    answer = number1 + number2;
-  } else if (operation === '-') {
-    answer = number1 - number2;
-  } else if (operation === '*') {
-    answer = number1 * number2;
+  switch (operation) {
+    case '+':
+      return number1 + number2;
+    case '-':
+      return number1 - number2;
+    case '*':
+      return number1 * number2;
+    default:
+      throw new Error(`Unknown operation: '${operation}'!`);
   }
-  return answer;
 };
+//  let answer;
+//  if (operation === '+') {
+//    answer = number1 + number2;
+//  } else if (operation === '-') {
+//    answer = number1 - number2;
+//  } else if (operation === '*') {
+//    answer = number1 * number2;
+//  }
+//  return answer;
+// };
 const logicOfTheGame = () => {
   const number1 = getRandomNumber(minRandomNumber, maxRandomNumber);
   const number2 = getRandomNumber(minRandomNumber, maxRandomNumber);
