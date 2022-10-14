@@ -16,7 +16,7 @@ const logicOfTheGame = () => {
   const maxRandomNumber = 19;
   const number1 = getRandomNumber(minRandomNumber, maxRandomNumber);
   const number2 = getRandomNumber(minRandomNumber, maxRandomNumber);
-  const input = readlineSync.question(`Question: ${number1} and ${number2} `);
+  const input = readlineSync.question(`Question: ${number1} ${number2} `);
   console.log(`Your answer: ${input}`);
   const answer = findGCD(number1, number2);
   return [input, String(answer)];
