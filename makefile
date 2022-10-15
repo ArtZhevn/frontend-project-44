@@ -8,3 +8,5 @@ brain-calc:
 	./bin/brain-calc.js
 brain-gcd:
 	./bin/brain-gcd.js
+brain-progression:
+	./bin/brain-progression.js

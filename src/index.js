@@ -12,7 +12,7 @@ export default (description, logicOfTheGame) => {
     if (arrayOfValues[0] === arrayOfValues[1]) {
       console.log('Correct!');
     } else {
-      console.log(`'${arrayOfValues[0]} is wrong answer ;(. Correct answer was '${arrayOfValues[1]}'.`);
+      console.log(`'${arrayOfValues[0]}' is wrong answer ;(. Correct answer was '${arrayOfValues[1]}'.`);
       console.log(`Let's try again, ${userName}!`);
       break;
     }
