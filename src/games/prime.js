@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import startPrime from '../index.js';
 import getRandomNumber from '../utils.js';
 
@@ -8,9 +7,7 @@ const logicOfTheGame = () => {
   let answer;
   const allDeviders = [];
   const arrOfDeviders = [];
-  const minRandomNumber = 1;
-  const maxRandomNumber = 19;
-  const isPrime = getRandomNumber(maxRandomNumber, minRandomNumber);
+  const isPrime = getRandomNumber(1, 19);
   for (let firstElementOfArr = 1; firstElementOfArr <= isPrime; firstElementOfArr += 1) {
     arrOfDeviders.push(firstElementOfArr);
   }
@@ -24,9 +21,7 @@ const logicOfTheGame = () => {
   } else {
     answer = 'no';
   }
-  const input = readlineSync.question(`Question: ${isPrime} `);
-  console.log(`Your answer: ${input}`);
-  return [input, answer];
+  return [isPrime, answer];
 };
 
 const runGame = () => {

@@ -1,21 +1,16 @@
-import readlineSync from 'readline-sync';
 import getRandomNumber from '../utils.js';
 import startEven from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 const logicOfTheGame = () => {
-  const minRandomNumber = 1;
-  const maxRandomNumber = 19;
   let answer;
-  const checkNumber = getRandomNumber(maxRandomNumber, minRandomNumber);
-  const input = readlineSync.question(`Question: ${checkNumber} `);
-  console.log(`Your answer: ${input}`);
+  const checkNumber = getRandomNumber(1, 19);
   if (checkNumber % 2 === 0) {
     answer = 'yes';
   } else if (checkNumber % 2 !== 0) {
     answer = 'no';
   }
-  return [input, answer];
+  return [String(checkNumber), answer];
 };
 
 const runGame = () => {

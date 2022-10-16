@@ -1,4 +1,3 @@
-import readlineSync from 'readline-sync';
 import startProgression from '../index.js';
 import getRandomNumber from '../utils.js';
 
@@ -11,21 +10,15 @@ const getProgression = (beginOfProgression, stepOfProgression, lastIndexOfProgre
 };
 
 const description = 'What number is missing in the progression?';
-const minStep = 2;
-const lastIndexOfProgression = 9;
-const firstIndex = 0;
-const maxRandomNumber = 19;
-const minRandomNumber = 1;
+const lastIndexOfProgression = 10;
 const logicOfTheGame = () => {
-  const beginOfProgression = getRandomNumber(minRandomNumber, maxRandomNumber);
-  const stepOfProgression = getRandomNumber(lastIndexOfProgression, minStep);
-  const emptyElement = getRandomNumber(lastIndexOfProgression, firstIndex);
+  const beginOfProgression = getRandomNumber(1, 19);
+  const stepOfProgression = getRandomNumber(2, 9);
+  const emptyElement = getRandomNumber(2, 9);
   const progression = getProgression(beginOfProgression, stepOfProgression, lastIndexOfProgression);
   const answer = progression[emptyElement];
   progression[emptyElement] = '..';
-  const input = readlineSync.question(`Question: ${progression.join(' ')} `);
-  console.log(`Your answer: ${input}`);
-  return [input, String(answer)];
+  return [progression.join(' '), String(answer)];
 };
 
 const runGame = () => {

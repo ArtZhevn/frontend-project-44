@@ -1,12 +1,8 @@
-import readlineSync from 'readline-sync';
 import getRandomNumber from '../utils.js';
 import startCalc from '../index.js';
 
 const description = 'What is the result of the expression?';
-const lastRandomIndex = 2;
-const minRandomNumber = 1;
-const maxRandomNumber = 19;
-const calcExpression = (number1, number2, operation) => { // возможно стоит заменить на switch
+const calcExpression = (number1, number2, operation) => {
   switch (operation) {
     case '+':
       return number1 + number2;
@@ -18,25 +14,15 @@ const calcExpression = (number1, number2, operation) => { // возможно с
       throw new Error(`Unknown operation: '${operation}'!`);
   }
 };
-//  let answer;
-//  if (operation === '+') {
-//    answer = number1 + number2;
-//  } else if (operation === '-') {
-//    answer = number1 - number2;
-//  } else if (operation === '*') {
-//    answer = number1 * number2;
-//  }
-//  return answer;
-// };
+
 const logicOfTheGame = () => {
-  const number1 = getRandomNumber(minRandomNumber, maxRandomNumber);
-  const number2 = getRandomNumber(minRandomNumber, maxRandomNumber);
-  const indexOfMathOperation = getRandomNumber(minRandomNumber - 1, lastRandomIndex);
+  const number1 = getRandomNumber(1, 19);
+  const number2 = getRandomNumber(1, 19);
   const arrOfMathOperation = ['+', '-', '*'];
-  const correctAnswer = calcExpression(number1, number2, arrOfMathOperation[indexOfMathOperation]);
-  const expression = `${number1} ${arrOfMathOperation[indexOfMathOperation]} ${number2}`;
-  const input = readlineSync.question(`Question: ${expression} `);
-  return [input, String(correctAnswer)];
+  const operation = arrOfMathOperation[getRandomNumber(0, arrOfMathOperation.length - 1)];
+  const expression = `${number1} ${operation} ${number2}`; // ques
+  const correctAnswer = calcExpression(number1, number2, operation);
+  return [expression, String(correctAnswer)];
 };
 
 const runGame = () => {
