@@ -2,12 +2,15 @@ import getRandomNumber from '../utils.js';
 import startEven from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
+
+const isEven = (checkNumber) => checkNumber % 2 === 0;
 const logicOfTheGame = () => {
-  let answer;
   const checkNumber = getRandomNumber(1, 19);
-  if (checkNumber % 2 === 0) {
+  let answer;
+  answer = isEven(checkNumber);
+  if (answer === true) {
     answer = 'yes';
-  } else if (checkNumber % 2 !== 0) {
+  } else {
     answer = 'no';
   }
   return [String(checkNumber), answer];
