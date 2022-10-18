@@ -1,6 +1,8 @@
 import startProgression from '../index.js';
 import getRandomNumber from '../utils.js';
 
+const description = 'What number is missing in the progression?';
+
 const getProgression = (beginOfProgression, stepOfProgression, lastIndexOfProgression) => {
   const arrOfProgression = [];
   for (let i = 0; i < lastIndexOfProgression; i += 1) {
@@ -9,9 +11,8 @@ const getProgression = (beginOfProgression, stepOfProgression, lastIndexOfProgre
   return arrOfProgression;
 };
 
-const description = 'What number is missing in the progression?';
-const lastIndexOfProgression = 10;
 const logicOfTheGame = () => {
+  const lastIndexOfProgression = 10;
   const beginOfProgression = getRandomNumber(1, 19);
   const stepOfProgression = getRandomNumber(2, 9);
   const emptyElement = getRandomNumber(2, 9);

@@ -4,6 +4,7 @@ import startEven from '../index.js';
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
 const isEven = (checkNumber) => checkNumber % 2 === 0;
+
 const logicOfTheGame = () => {
   const checkNumber = getRandomNumber(1, 19);
   let answer;
