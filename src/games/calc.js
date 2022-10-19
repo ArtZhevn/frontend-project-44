@@ -16,7 +16,7 @@ const calcExpression = (number1, number2, operation) => {
   }
 };
 
-const logicOfTheGame = () => {
+const generateRound = () => {
   const number1 = getRandomNumber(1, 19);
   const number2 = getRandomNumber(1, 19);
   const arrOfMathOperation = ['+', '-', '*'];
@@ -27,6 +27,6 @@ const logicOfTheGame = () => {
 };
 
 const runGame = () => {
-  startCalc(description, logicOfTheGame);
+  startCalc(description, generateRound);
 };
 export default runGame;

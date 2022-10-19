@@ -15,7 +15,7 @@ const isPrime = (checkNumber) => {
   return true;
 };
 
-const logicOfTheGame = () => {
+const generateRound = () => {
   let answer;
   const checkNumber = getRandomNumber(1, 19);
   if (isPrime(checkNumber) === true) {
@@ -27,7 +27,7 @@ const logicOfTheGame = () => {
 };
 
 const runGame = () => {
-  startPrime(description, logicOfTheGame);
+  startPrime(description, generateRound);
 };
 
 export default runGame;

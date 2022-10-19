@@ -5,7 +5,7 @@ const description = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 const isEven = (checkNumber) => checkNumber % 2 === 0;
 
-const logicOfTheGame = () => {
+const generateRound = () => {
   const checkNumber = getRandomNumber(1, 19);
   let answer;
   answer = isEven(checkNumber);
@@ -18,7 +18,7 @@ const logicOfTheGame = () => {
 };
 
 const runGame = () => {
-  startEven(description, logicOfTheGame);
+  startEven(description, generateRound);
 };
 
 export default runGame;

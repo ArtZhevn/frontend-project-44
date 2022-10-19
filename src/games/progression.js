@@ -11,7 +11,7 @@ const getProgression = (beginOfProgression, stepOfProgression, lastIndexOfProgre
   return arrOfProgression;
 };
 
-const logicOfTheGame = () => {
+const generateRound = () => {
   const lastIndexOfProgression = 10;
   const beginOfProgression = getRandomNumber(1, 19);
   const stepOfProgression = getRandomNumber(2, 9);
@@ -23,6 +23,6 @@ const logicOfTheGame = () => {
 };
 
 const runGame = () => {
-  startProgression(description, logicOfTheGame);
+  startProgression(description, generateRound);
 };
 export default runGame;
