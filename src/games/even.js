@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils.js';
-import startEven from '../index.js';
+import runEngine from '../index.js';
 
 const description = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -12,7 +12,7 @@ const generateRound = () => {
 };
 
 const runGame = () => {
-  startEven(description, generateRound);
+  runEngine(description, generateRound);
 };
 
 export default runGame;

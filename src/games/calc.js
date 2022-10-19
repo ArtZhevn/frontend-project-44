@@ -1,5 +1,5 @@
 import getRandomNumber from '../utils.js';
-import startCalc from '../index.js';
+import runEngine from '../index.js';
 
 const description = 'What is the result of the expression?';
 
@@ -27,6 +27,6 @@ const generateRound = () => {
 };
 
 const runGame = () => {
-  startCalc(description, generateRound);
+  runEngine(description, generateRound);
 };
 export default runGame;

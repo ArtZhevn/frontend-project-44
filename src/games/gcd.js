@@ -1,4 +1,4 @@
-import startGCD from '../index.js';
+import runEngine from '../index.js';
 import getRandomNumber from '../utils.js';
 
 const description = 'Find the greatest common divisor of given numbers.';
@@ -20,7 +20,7 @@ const generateRound = () => {
 };
 
 const runGame = () => {
-  startGCD(description, generateRound);
+  runEngine(description, generateRound);
 };
 
 export default runGame;
