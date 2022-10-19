@@ -19,11 +19,11 @@
 ### Start games:
 
 ```
- $ make brain-even
- $ make brain-calc
- $ make brain-gcd
- $ make brain-progression
- $ make brain-prime
+ $ brain-even
+ $ brain-calc
+ $ brain-gcd
+ $ brain-progression
+ $ brain-prime
 ```
 
 Demo 'brain-even':
