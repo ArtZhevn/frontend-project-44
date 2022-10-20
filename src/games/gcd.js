@@ -13,9 +13,9 @@ const getGCD = (a, b) => {
 const generateRound = () => {
   const number1 = getRandomNumber(1, 19);
   const number2 = getRandomNumber(1, 19);
-  const expression = `${number1} ${number2}`;
+  const question = `${number1} ${number2}`;
   const answer = getGCD(number1, number2);
-  return [expression, String(answer)];
+  return [question, String(answer)];
 };
 
 const runGame = () => {

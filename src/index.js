@@ -8,8 +8,8 @@ export default (description, generateRound) => {
   console.log(`Hello, ${userName}!`);
   console.log(description);
   for (let count = 0; count < roundsCount; count += 1) {
-    const [expression, correctAnswer] = generateRound();
-    const answer = readlineSync.question(`Question: ${expression} `);
+    const [question, correctAnswer] = generateRound();
+    const answer = readlineSync.question(`Question: ${question} `);
     console.log(`Your answer: ${answer}`);
     if (answer !== correctAnswer) {
       console.log(`'${answer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.`);
