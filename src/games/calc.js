@@ -20,9 +20,9 @@ const generateRound = () => {
   const number1 = getRandomNumber(1, 19);
   const number2 = getRandomNumber(1, 19);
   const operators = ['+', '-', '*'];
-  const operation = operators[getRandomNumber(0, operators.length - 1)];
-  const expression = `${number1} ${operation} ${number2}`;
-  const answer = calculate(number1, number2, operation);
+  const operator = operators[getRandomNumber(0, operators.length - 1)];
+  const expression = `${number1} ${operator} ${number2}`;
+  const answer = calculate(number1, number2, operator);
   return [expression, String(answer)];
 };
 
